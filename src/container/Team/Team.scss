@@ -1,0 +1,39 @@
+.app__team {
+  text-align: center;
+
+  width: 100%;
+}
+
+.app__team-data {
+  width: 100%;
+  img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .app__team-name {
+    font-weight: var(--font-bold);
+    text-transform: uppercase;
+    color: var(--darkblue-color);
+    font-size: var(--h2-font-size);
+  }
+
+  .app__team-description {
+    margin-bottom: 2rem;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  p {
+    font-size: var(--normal-font-size);
+  }
+}
+
+.app__team-swiper {
+  width: 100%;
+  height: auto;
+  display: flex;
+}

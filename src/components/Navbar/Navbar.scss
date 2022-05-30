@@ -1,0 +1,127 @@
+.navbar {
+  height: var(--header-height);
+  width: 100vw;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: transparent;
+
+  position: fixed;
+  z-index: var(--z-fixed);
+
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  @media screen and (min-width: 768px) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  padding: 2rem;
+  // box-shadow: 0px 3px 18px #bdbdbd;
+}
+
+.active {
+  background: var(--white-color);
+}
+
+.app__navbar-logo {
+  img {
+    width: 10rem;
+    height: auto;
+  }
+}
+
+.app__navbar-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  list-style: none;
+
+  li {
+    margin: 0 1rem;
+    cursor: pointer;
+
+    a {
+      text-decoration: none;
+      color: var(--white-color);
+
+      &:hover {
+        font-weight: var(--font-bold);
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.app__navbar-menu {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    width: 1.2rem;
+    height: auto;
+    cursor: pointer;
+  }
+
+  div {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 111;
+
+    padding: 1rem;
+    width: 70%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    background-color: #fff;
+
+    box-shadow: 0 0 20px rgba(168, 168, 168, 0.15);
+
+    svg {
+      width: 35px;
+      height: 35px;
+
+      color: var(--black-color);
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+
+      li {
+        margin: 1rem;
+
+        a {
+          color: var(--black-color);
+          text-decoration: none;
+          font-size: var(--h3-font-size);
+          text-transform: uppercase;
+          font-weight: var(--font-medium);
+
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}

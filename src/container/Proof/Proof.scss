@@ -1,0 +1,69 @@
+.app__application {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .app__application-description {
+    font-size: var(--small-font-size);
+    width: 100%;
+    color: var(--black-color);
+    margin-bottom: 2rem;
+  }
+  
+  .app__application-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  
+    .app__mobile-img {
+      height: 250px;
+      width: auto;
+      margin-bottom: 1rem;
+    }
+  
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 0.5rem;
+      .app__mobile-store {
+        height: auto;
+        width: 100px;
+      }
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    .app__application-container {
+      display: grid;
+      align-items: center;
+      grid-template-columns: 1fr 1fr;
+      grid-auto-flow: dense;
+      gap: 2rem;
+      text-align: left;
+    }
+  
+    .app__application-content {
+      grid-row: 1;
+      grid-column: 1;
+      .app__mobile-img {
+        width: 100%;
+        height: auto;
+      }
+  
+      .app__mobile-store {
+        width: 500px;
+        height: auto;
+      }
+    }
+  
+    .app__application-description {
+      font-size: var(--normal-font-size);
+      width: 100%;
+      color: var(--black-color);
+      margin-bottom: 0;
+    }
+  }
+  

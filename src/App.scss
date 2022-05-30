@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.app {
+  background: var(--white-color);
+  width: 100%;
+  overflow: hidden;
+}
+
+.app__flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app__container {
+  margin-left: 1rem;
+  margin-right: 1rem;
+
+  @media screen and (min-width: 768px) {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: var(--black-color);
+}
+
+button,
+input {
+  border: none;
+  font-size: var(--normal-font-size);
+}
+
+.app__section {
+  padding: 4.5rem 0;
+
+  @media screen and (min-width: 768px) {
+    padding: 7rem 0;
+  }
+}
+
+.app__section__title {
+  font-size: var(--h2-font-size);
+  color: var(--primary-color);
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+}
+
+.app__title-center {
+  width: 100%;
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi-bold);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  color: var(--primary-color);
+  div {
+    margin-right: 0.5rem;
+    height: 3px;
+    width: 20px;
+    background: var(--primary-color);
+  }
+
+  @media screen and (min-width: 768px) {
+    text-align: right;
+  }
+}
+
+.app__subtitle-center {
+  text-transform: uppercase;
+  font-size: var(--h1-font-size);
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.app__title-start {
+  width: 100%;
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi-bold);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  color: var(--primary-color);
+  div {
+    margin-right: 0.5rem;
+    height: 3px;
+    width: 20px;
+    background: var(--primary-color);
+  }
+}
+
+.app__subtitle-start {
+  text-transform: uppercase;
+  font-size: var(--h1-font-size);
+  color: var(--white-color);
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .app__title-start {
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .app__subtitle-start {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .app__subtitle-center,
+  .app__subtitle-start {
+    font-size: 3rem;
+  }
+}

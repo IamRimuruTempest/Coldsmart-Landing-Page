@@ -1,0 +1,121 @@
+.app__home {
+  color: var(--primary-color);
+  // padding-top: 7rem;
+  // padding-left: 1rem;
+  // padding-right: 1rem;
+  // padding-bottom: 4.5rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+
+  width: 100%;
+
+  background-image: url("../../assets/hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.app__home::before {
+  content: "";
+  position: absolute;
+  height: 100vh;
+  width: inherit;
+  background-color: var(--primary-color);
+  opacity: 0.5;
+  margin: 0;
+  padding: 0;
+}
+
+.app__home-container {
+  width: 100%;
+  z-index: 10;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-top: 5rem;
+}
+
+.app__home-data {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  row-gap: 1rem;
+
+  .app__home-title {
+    font-size: var(--h1-font-size);
+    text-transform: uppercase;
+    color: var(--white-color);
+  }
+
+  .app__home-subtitle {
+    font-size: var(--normal-font-size);
+    color: var(--white-color);
+  }
+
+  .app__home-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.5rem;
+
+    a {
+      width: 7rem;
+      background: var(--primary-color);
+      padding: 0.5rem 1rem;
+      color: var(--white-color);
+      font-size: var(--small-font-size);
+      // border-radius: 18px;
+    }
+  }
+}
+
+.app__home-img {
+  width: 100%;
+
+  img {
+    width: 300px;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .app__home-container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 0;
+    margin: 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .app__home-data {
+    text-align: start;
+    align-items: flex-start;
+
+    .app__home-title {
+      font-size: 2.8rem;
+      font-weight: 900;
+    }
+
+    .app__home-buttons {
+      text-align: center;
+    }
+  }
+
+  .app__home-img {
+    height: 350px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .app__home-container {
+    margin-top: 0;
+  }
+}
